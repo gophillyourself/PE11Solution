@@ -20,7 +20,7 @@ double CircleType::getRadius()
 
 double CircleType::area()
 {
-  return 3.1416 * radius *radius;
+  return 3.1416 * radius * radius;
 }
 
 double CircleType::circumference()

@@ -6,19 +6,18 @@ using namespace std;
 
 //CylinderType::CylinderType() : a(0) {}
 
+double CylinderType::calcArea()
+{
+  area = 2*pi*radius*height + 2 * pi * radius * radius;
+  return area;
+}
+
+
 double CylinderType::calcVolume()
 {
   double volume;
-  volume = pi * radius *radius * area;
+  volume = pi * radius * radius * area;
   return volume;
-}
-
-double CylinderType::calcArea()
-{
-  double area;
-  area = 2*pi*radius*height + 2 * pi * radius * radius;
-  cout<<"The area of the Cylinder is "<<area;
-  return area;
 }
 
 void CylinderType::setRad(double r)
@@ -39,4 +38,9 @@ double CylinderType::getHeight()
 double CylinderType::baseArea()
 {
   return CircleType::area();
+}
+
+CylinderType::CylinderType(double r, double h):CircleType(r)
+{
+  setHeight(h);
 }

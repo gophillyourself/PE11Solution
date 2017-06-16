@@ -13,9 +13,8 @@ public:
 
   const double pi = 3.1415926;
   double volume;
-  double area;
   double height;
-  double radius;
+  double area;
 
   double calcVolume ();
   double calcArea ();
@@ -25,8 +24,7 @@ public:
   double baseArea();
 
   CylinderType();
-  CylinderType(double h) : height(h) {}
-
+  CylinderType(double radius, double height);
 
 };
 
