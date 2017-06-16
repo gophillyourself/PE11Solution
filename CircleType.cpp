@@ -3,17 +3,31 @@
 
 using namespace std;
 
-CircleType::CircleType() : a(0) {}
+CircleType::CircleType() {}
 
-double CircleType::calcArea(double radius, const double pi)
+void CircleType::setRadius(double r)
 {
-  double area;
-  area = radius * radius * pi;
-  return area;
+  if (r>=0)
+    radius = r;
+  else
+    radius = 0;
 }
-double CircleType::calcCircum(double radius, const double pi)
+
+double CircleType::getRadius()
 {
-  double circum;
-  circum = 2 * radius * pi;
-  return circum;
+  return radius;
+}
+
+double CircleType::area()
+{
+  return 3.1416 * radius *radius;
+}
+
+double CircleType::circumference()
+{
+  return 2 * 3.1416 * radius;
+}
+CircleType::CircleType(double r)
+{
+  setRadius(r);
 }

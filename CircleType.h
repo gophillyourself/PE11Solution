@@ -9,21 +9,22 @@ class CircleType
 {
 private:
 
-  double radius;
-  double area;
-  double circum;
-  const double pi = 3.1415926;
+
 
 public:
 
+  double radius;
+
+
   CircleType();
-  CircleType(double a) : a(radius) {}
-  
-  double calcArea(double radius, const double pi);
-  double calcCircum(double radius, const double pi);
+  CircleType(double r=0);
 
+  void setRadius(double r);
+  double getRadius();
+  double area();
+  double circumference();
 
-}
+};
 
 
 #endif
